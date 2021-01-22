@@ -50,11 +50,10 @@ import Notification from '~/components/Notification'
 
 export default {
   name:"Connexion",
+  middleware: 'guest',
   components: {
     Notification,
   },
-  middleware: 'guest',
-
   data() {
     return {
       email: '',
@@ -70,6 +69,15 @@ export default {
           email: this.email,
           password: this.password
         })
+
+        await this.$auth.loginWith('local',
+          {
+            data: {
+              email: this.email,
+              password: this.password
+            }
+          })
+        await this.$router.push('/dashboard')
       } catch (e) {
         this.error = e.response.data.message
       }

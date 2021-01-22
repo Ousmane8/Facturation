@@ -64,17 +64,18 @@ import Notification from '~/components/Notification'
 
 export default {
   name:"Inscription",
+  middleware: 'guest',
   components: {
     Notification,
   },
-  middleware: 'guest',
-
   data() {
     return {
+      login: {
       username: '',
       email: '',
       password: '',
       error: null
+      }
     }
   },
 
@@ -87,14 +88,12 @@ export default {
           password: this.password
         })
 
-        await this.$auth.loginWith('local', {
-          data: {
-            email: this.email,
-            password: this.password
-          },
-        })
+        await this.$auth.loginWith('local',
+          {
+            data: this.login
+          })
 
-        await this.$router.push('/')
+        await this.$router.push('/dashboard')
       } catch (e) {
         this.error = e.response.data.message
       }

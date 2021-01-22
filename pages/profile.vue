@@ -34,6 +34,7 @@
               </div>
               <div class="column is-6">
                 <p>Ousti</p>
+                <!--<p>{{loggedInUser.username}}</p>-->
               </div>
             </div>
             <div class="row">
@@ -65,7 +66,7 @@
                 <label>Email :</label>
               </div>
               <div class="column is-6">
-                <p>sogafacturation@soga.fr</p>
+                <p>{{loggedInUser.email}}</p>
               </div>
             </div>
             <div class="row">
@@ -87,9 +88,14 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: "Profile",
   middleware: 'auth',
+  computed: {
+    ...mapGetters(['loggedInUser'])
+  },
 }
 </script>
 
