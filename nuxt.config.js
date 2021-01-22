@@ -43,15 +43,15 @@ export default {
   // nuxt.config.js
 
   axios: {
-    baseURL: ''
+    baseURL: 'http://hidden-forest-44147.herokuapp.com/auth/register'
   },
 
   auth: {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'login', method: 'post', propertyName: 'data.token' },
-          user: { url: 'me', method: 'get', propertyName: 'data' },
+          login: { url: '', method: 'post', propertyName: 'data.token' },
+          user: { url: '', method: 'post', propertyName: 'data' },
           logout: false
         }
       }
