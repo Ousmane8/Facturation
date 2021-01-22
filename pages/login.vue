@@ -65,18 +65,11 @@ export default {
 
   methods: {
     async login() {
-      const body = {
-        email: this.email,
-        password: this.password
-      }
-      console.log(JSON.stringify(body))
       try {
-        console.log(this.$auth)
-        await this.$auth.loginWith('local', {data:JSON.stringify(body)},
-          //JSON.stringify(body)
-        )
-        console.log(this.$auth)
-        await this.$router.push('/')
+        await this.$axios.post('auth/login', {
+          email: this.email,
+          password: this.password
+        })
       } catch (e) {
         this.error = e.response.data.message
       }
