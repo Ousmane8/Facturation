@@ -65,11 +65,6 @@ export default {
   methods: {
     async login() {
       try {
-        await this.$axios.post('auth/login', {
-          email: this.email,
-          password: this.password
-        })
-
         await this.$auth.loginWith('local',
           {
             data: {
@@ -77,7 +72,7 @@ export default {
               password: this.password
             }
           })
-        await this.$router.push('/dashboard')
+         this.$router.push('/dashboard')
       } catch (e) {
         this.error = e.response.data.message
       }

@@ -13,6 +13,8 @@ export default {
       { rel:"stylesheet" , href:"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", id:"bootstrap-css"},
       { src:"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"},
       { src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"},
+      { src:"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"},
+      { src:"https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"},
     ]
   },
 
@@ -51,7 +53,7 @@ export default {
       local: {
         endpoints: {
           login: { url: 'auth/login', method: 'post', propertyName: 'data.token'},
-          user: { url: '', method: 'get', propertyName: 'data' },
+          user: { url: 'user', method: 'get', propertyName: 'data' },
           logout: false
         }
       }
