@@ -2,7 +2,7 @@
   <nav class="navbar is-light">
     <div class="container">
       <div class="navbar-brand">
-        <nuxt-link class="navbar-item" to="/">
+        <nuxt-link class="navbar-item" to="/home">
           <img src="~assets/logo.png" alt="logo">
         </nuxt-link>
       </div>
@@ -10,11 +10,11 @@
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable" v-if="isAuthenticated">
             <a class="navbar-link">
-              {{ loggedInUser.username }}
+              {{ loggedInUser.name }}
             </a>
             <div class="navbar-dropdown">
-              <nuxt-link class="navbar-item ins-re" to="/profile">Mon Profil</nuxt-link>
-              <hr class="navbar-divider">
+              <!--<nuxt-link class="navbar-item ins-re" to="/profile">Mon Profil</nuxt-link>
+              <hr class="navbar-divider">-->
               <a class="navbar-item" @click="logout">Deconnexion</a>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default {
   methods: {
     async logout() {
       await this.$auth.logout();
-      //this.$router.push('/');
+      this.$router.push('/');
     },
   }
 }
@@ -53,9 +53,9 @@ export default {
   text-decoration: none;
 }
 .navbar.is-light {
-  //background-color: #f5f5f5;
-  background-color: transparent;
-  //border-bottom:  1px solid #0a1c2e;
+  background-color: #F5F2F5;
+  //background-color: transparent;
+  border-bottom:  1px solid #0a1c2e;
   color: #363636;
 }
 </style>

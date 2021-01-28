@@ -15,7 +15,7 @@
                   type="text"
                   class="input"
                   name="username"
-                  v-model="username"
+                  v-model="name"
                   required
                 >
               </div>
@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       login: {
-      username: '',
+      name: '',
       email: '',
       password: '',
       error: null
@@ -83,11 +83,10 @@ export default {
     async register() {
       try {
         await this.$axios.post('register', {
-          username: this.username,
+          name: this.name,
           email: this.email,
           password: this.password
         })
-
         await this.$auth.loginWith('local',
           {
             data: {
@@ -96,7 +95,7 @@ export default {
             },
           })
 
-        this.$router.push('/dashboard')
+        this.$router.push('/home')
       } catch (e) {
         this.error = e.response.data.message
       }

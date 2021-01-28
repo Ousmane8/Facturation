@@ -2,34 +2,21 @@
   <div class="container">
     <sidebar-menu :menu="menu" />
     <div class="columns">
-      <div class="column is-full chart1">
-        <h3 class="titre-dash">Line Chart</h3>
-        <Chart1 class="div-chart"/>
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column is-7 chart2">
-        <h3 class="titre-dash">Bar Chart </h3>
-        <Chart2 class="div-chart"/>
-      </div>
-      <div class="column is-5 chart3">
-        <h3 class="titre-dash">Doughnut Chart</h3>
-        <Chart3 class="div-chart"/>
+      <div class="column is-full map">
+        <h3 class="titre-map">Google Maps</h3>
+        <div class="div-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83925.9811985968!2d2.137959027580561!3d48.90230366910789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f800d81540f%3A0xfdb51db078bede5e!2sSOGA%20EDIT!5e0!3m2!1sfr!2sfr!4v1611860694781!5m2!1sfr!2sfr" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Chart1 from "~/components/Chart1/Chart1";
-import Chart2 from "@/components/Chart2/Chart2";
-import Chart3 from "@/components/Chart3/Chart3";
 
 export default {
-  name: "Dashboard",
+  name: "Carte",
   middleware: 'auth',
   components: {
-    Chart1, Chart2, Chart3
   },
   data() {
     return {
@@ -66,27 +53,24 @@ export default {
       ]
     }
   },
-
 }
 
 </script>
 
+
 <style scoped>
 .container {
   margin: 0 auto;
+
 }
 .v-sidebar-menu {
   background-color: #0a1c2e;
   width: 10% !important;
 }
-.v-sidebar-menu .vsm--toggle-btn {
-  color: #fff;
-  background-color: #1e1e21;
-  height: 20vh!important;
-}
-.chart1{
+.map{
   margin-top: 3%!important;
-  margin: 1%;
+  margin-bottom: 10%!important;
+  right: 5%;
   border-radius: 6px;
   box-shadow: 0 2px 2px hsl(38deg 16% 76% / 50%);
   background-color: #f4f3ee;
@@ -94,40 +78,15 @@ export default {
   position: relative;
   z-index: 1;
   border: none;
-  width: 102%;
+  width: 123%;
 }
-.chart2{
-  margin: 1%;
-  border-radius: 6px;
-  box-shadow: 0 2px 2px hsl(38deg 16% 76% / 50%);
-  background-color: #f4f3ee;
-  color: #252422;
-  position: relative;
-  z-index: 1;
-  border: none;
-  margin-bottom: 3%!important;
-
-}
-.chart3{
-  margin: 1%;
-  border-radius: 6px;
-  box-shadow: 0 2px 2px hsl(38deg 16% 76% / 50%);
-  background-color: #f4f3ee;
-  color: #252422;
-  position: relative;
-  z-index: 1;
-  border: none;
-  margin-bottom: 3%!important;
-}
-.titre-dash{
-  margin: 0;
+.titre-map{
+  margin: 2%;
   color: #252422;
   font-weight: 300;
   font-size: 2em;
 }
-.div-chart{
-  margin: 3%;
+.div-map{
+  margin: 0;
 }
-
-
 </style>

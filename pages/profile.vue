@@ -1,5 +1,7 @@
 <template>
-  <div class="container emp-profile">
+  <div class="container">
+    <sidebar-menu :menu="menu" />
+  <div class="emp-profile">
     <form method="post">
       <div class="column is-full">
         <div class="profile-head">
@@ -15,7 +17,7 @@
             <img src="http://placehold.it/150x100" alt=""/>
             <div class="file btn btn-lg btn-primary">
               Change Photo
-              <input type="file" name="file"/>
+              <input type="file" name="file" accept=".png,.jpg, .jpeg, .webp"/>
             </div>
           </div>
         </div>
@@ -34,7 +36,7 @@
               </div>
               <div class="column is-6">
                 <p>Ousti</p>
-                <!--<p>{{loggedInUser.username}}</p>-->
+                <p>{{loggedInUser.name}}</p>
               </div>
             </div>
             <div class="row">
@@ -85,6 +87,7 @@
       </div>
     </form>
   </div>
+  </div>
 </template>
 
 <script>
@@ -96,14 +99,58 @@ export default {
   computed: {
     ...mapGetters(['loggedInUser'])
   },
+  components: {
+  },
+  data() {
+    return {
+      menu: [
+        {
+          header: true,
+          hiddenOnCollapse: true
+        },
+        {
+          href: '/home',
+          title: 'Accueil',
+          icon: 'fa fa-home',
+        },
+        {
+          href: '/dashboard',
+          title: 'Dashboard',
+          icon: 'fa fa-chart-line',
+        },
+        {
+          href: '/billing',
+          title: 'Factures',
+          icon: 'fa fa-file-invoice',
+        },
+        {
+          href: '/maps',
+          title: 'Carte',
+          icon: 'fa fa-map',
+        },
+        {
+          href: '/profile',
+          title: 'Profil',
+          icon: 'fa fa-user',
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <style scoped>
+.container {
+  margin: 0 auto;
+}
+.v-sidebar-menu {
+  background-color: #0a1c2e;
+  width: 10% !important;
+}
 .emp-profile{
   padding: 2%;
-  margin-top: 2%;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 7%;
 }
 
 .profile-img img{

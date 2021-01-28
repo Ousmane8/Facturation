@@ -66,6 +66,9 @@ Dashboard :
 https://morioh.com/p/69b053efc138
 https://github.com/ansezz/vue-paper-dashboard-nuxtjs/tree/master/pages
 https://vue-paper-dashboard-nuxtjs.herokuapp.com/dashboard#
+https://mebee.info/2020/07/05/post-13070/
+
 
 https://code.luasoftware.com/tutorials/vuejs/setup-vue-chartjs-in-nuxt/
 https://vue-chartjs.org/guide/
+https://www.positronx.io/create-awesome-charts-in-vue-js-with-chart-js-and-vue-chartjs/

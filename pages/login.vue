@@ -72,7 +72,7 @@ export default {
               password: this.password
             }
           })
-         this.$router.push('/dashboard')
+         this.$router.push('/home')
       } catch (e) {
         this.error = e.response.data.message
       }

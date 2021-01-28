@@ -11,6 +11,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css'},
       { rel:"stylesheet" , href:"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", id:"bootstrap-css"},
+      { rel:"stylesheet" , href:"https://use.fontawesome.com/releases/v5.6.1/css/all.css"},
       { src:"https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"},
       { src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"},
       { src:"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"},
@@ -24,6 +25,10 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    {
+      src: '@/plugins/plugin',
+      mode: 'client'
+    }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -52,10 +57,12 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'auth/login', method: 'post', propertyName: 'data.token'},
-          user: { url: 'user', method: 'get', propertyName: 'data' },
-          logout: false
-        }
+          login: { url: 'auth/login', method: 'post', propertyName: 'token'},
+          user: { url: 'user', method: 'get', propertyName: false },
+          logout: false,
+        },
+        tokenRequired: true,
+        tokenType: 'Bearer',
       }
     }
   },
