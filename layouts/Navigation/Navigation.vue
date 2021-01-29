@@ -1,22 +1,32 @@
 <template>
-  <a-navigation-header>
-    <a-menu
-      theme="dark"
-      mode="horizontal"
-      :defaultSelectedKeys="['1']"
-      :style="{ lineHeight: '52px' }"
-    >
-      <a-menu-item key="1">
-        <Contact/>
-      </a-menu-item>
-      <a-menu-item key="2">
-        <router-link to="/invoices">Factures</router-link>
-      </a-menu-item>
-      <a-menu-item key="3">
-        <router-link to="/organisationSettings">Settings</router-link>
-      </a-menu-item>
-    </a-menu>
-  </a-navigation-header>
+  <div class="tabs is-centered">
+    <ul>
+      <li class="is-active">
+        <Contact>
+          <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+          <span>Pictures</span>
+        </Contact>
+      </li>
+      <li>
+        <a>
+          <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+          <span>Music</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+          <span>Videos</span>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+          <span>Documents</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

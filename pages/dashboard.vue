@@ -3,17 +3,17 @@
     <sidebar-menu :menu="menu" />
     <div class="columns">
       <div class="column is-full chart1">
-        <h3 class="titre-dash">Line Chart</h3>
+        <h3 class="titre-dash">Statistiques sur CA Annuel</h3>
         <Chart1 class="div-chart"/>
       </div>
     </div>
     <div class="columns">
       <div class="column is-7 chart2">
-        <h3 class="titre-dash">Bar Chart </h3>
+        <h3 class="titre-dash">Statistiques sur CA mensuel</h3>
         <Chart2 class="div-chart"/>
       </div>
       <div class="column is-5 chart3">
-        <h3 class="titre-dash">Doughnut Chart</h3>
+        <h3 class="titre-dash">Statistiques sur CA Continental</h3>
         <Chart3 class="div-chart"/>
       </div>
     </div>
