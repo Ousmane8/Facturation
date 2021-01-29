@@ -1,7 +1,8 @@
 <template>
   <div class="container">
   <sidebar-menu :menu="menu" />
-  <div class="how-section1">
+    <Invoices/>
+  <!--<div class="how-section1">
     <div class="row">
       <div class="col-md-6 how-img">
         <img src="https://image.ibb.co/dDW27U/Work_Section2_freelance_img1.png" class="rounded-circle img-fluid" alt=""/>
@@ -26,15 +27,20 @@
         <img src="https://image.ibb.co/cHgKnU/Work_Section2_freelance_img2.png" class="rounded-circle img-fluid" alt=""/>
       </div>
     </div>
-  </div>
+  </div>-->
   </div>
 </template>
 
 <script>
+import Navigation from "~/layouts/Navigation/Navigation";
+import Invoices from "~/components/Billing/Invoices/Invoices";
+//import Contact from "~/components/Billing/Contacts/Contact";
 export default {
   name: "Factures",
   middleware: 'auth',
   components: {
+    Invoices,
+    Navigation
   },
   data() {
     return {
