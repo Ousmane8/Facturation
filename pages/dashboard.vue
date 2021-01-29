@@ -54,6 +54,11 @@ export default {
           icon: 'fa fa-file-invoice',
         },
         {
+          href: '/contacts',
+          title: 'Contacts',
+          icon: 'fa fa-users',
+        },
+        {
           href: '/maps',
           title: 'Carte',
           icon: 'fa fa-map',
@@ -65,7 +70,8 @@ export default {
         }
       ]
     }
-  },
+  }
+
 
 }
 

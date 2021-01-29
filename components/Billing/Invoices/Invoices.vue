@@ -4,8 +4,8 @@
       <div id="invoice-app">
         <div class="header">
           <div>
-            <h1>Invoice Builder</h1>
-            <p>Date:  <!--<input type="date" v-model="invoiceDate">--></p>
+            <h1 class="titre-invoices">Invoice</h1>
+            <p>Date:  <input type="date" v-model="invoiceDate"></p>
           </div>
           <div>
             <div class="section-spacer">
@@ -72,7 +72,7 @@
           <p>Terms:</p>
           <textarea></textarea>
         </div>
-        <div class="columns">
+        <div class="columns button-invoice">
           <div class="column">
             <button class="button is-link is-light is-large" @click="Print">Print Invoice</button>
           </div>
@@ -118,6 +118,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.titre-invoices{
+  margin: 2%;
+  color: #252422;
+  font-weight: bold;
+  font-size: 3em;
 }
 @media print {
   .main-content {
@@ -167,11 +173,14 @@ input:hover, select:hover, textarea:hover {
 @media only screen and (min-width: 761px) {
   input, select, textarea {
     width: auto;
+    background: white;
+    text-align: center;
   }
 }
 textarea {
   width: 100%;
   min-height: 80px;
+background: white;
 }
 @media only screen and (max-width: 760px) {
   select {
@@ -185,6 +194,7 @@ textarea {
 }
 .company-name {
   font-size: 2rem;
+  border-bottom: 1px solid #b99d9d;
 }
 table {
   width: auto;
@@ -201,10 +211,11 @@ table thead th:nth-last-child(-n+1) {
   padding-right: 0;
 }
 table tr {
-  border-bottom: 1px solid #f4d4aa;
+  border-bottom: 1px solid black;
 }
 table tr td {
   padding: 0.5rem 1rem;
+
 }
 table tr td:nth-child(-n+1) {
   padding-left: 0;
@@ -214,12 +225,16 @@ table tr td:nth-last-child(-n+1) {
 }
 table tr td input {
   width: 100%;
+  background: white;
+
 }
 table tr td .cell-with-input {
   display: flex;
 }
 table tr td .cell-with-input input {
   margin: 0 0.2rem;
+  background: white;
+
 }
 .responsive-table {
   width: 100%;
@@ -287,5 +302,9 @@ button.is-danger:hover {
 }
 .text-bold {
   font-weight: bold;
+}
+.button-invoice{
+  margin: 0;
+  margin-left: 5%;
 }
 </style>

@@ -70,6 +70,11 @@ export default {
           icon: 'fa fa-file-invoice',
         },
         {
+          href: '/contact',
+          title: 'Contacts',
+          icon: 'fa fa-users',
+        },
+        {
           href: '/maps',
           title: 'Carte',
           icon: 'fa fa-map',

@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-  <sidebar-menu :menu="menu" />
-    <Invoices/>
+    <sidebar-menu :menu="menu" />
+    <Contact/>
   </div>
 </template>
 
 <script>
-import Invoices from "~/components/Billing/Invoices/Invoices";
+import Contact from "~/components/Billing/Contacts/Contact";
 export default {
-  name: "Factures",
+  name: "Contacts",
   middleware: 'auth',
   components: {
-    Invoices,
+    Contact,
   },
   data() {
     return {
@@ -53,7 +53,6 @@ export default {
       ]
     }
   }
-
 }
 </script>
 
