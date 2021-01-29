@@ -1,5 +1,11 @@
 <template>
-  <table class="border-collapse w-full section">
+  <div class="container section">
+  <div>
+    <button class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-blue-700 rounded shadow ripple hover:shadow-lg hover:bg-blue-800 focus:outline-none">
+      Add New Customer
+    </button>
+  </div>
+  <table class="border-collapse w-full sectioner">
     <thead>
     <tr>
       <th class="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Id</th>
@@ -46,6 +52,7 @@
     </tr>
     </tbody>
   </table>
+  </div>
 </template>
 
 <script>
@@ -57,6 +64,9 @@ export default {
 <style scoped>
 .section{
 margin-top: 2%;
-margin-bottom: 50%;
+height: 75vh;
+}
+.sectioner{
+  margin-top: 2%;
 }
 </style>
