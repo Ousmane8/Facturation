@@ -9,7 +9,7 @@
 import Invoices from "~/components/Billing/Invoices/Invoices";
 export default {
   name: "Factures",
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
     Invoices,
   },

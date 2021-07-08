@@ -50,7 +50,7 @@ import Notification from '~/components/Notification'
 
 export default {
   name:"Connexion",
-  middleware: 'guest',
+  //middleware: 'guest',
   components: {
     Notification,
   },

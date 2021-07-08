@@ -19,6 +19,7 @@
             </div>
           </div>
           <template v-else>
+            <nuxt-link class="navbar-item ins-re" to="/home">Home</nuxt-link>
             <nuxt-link class="navbar-item ins-re" to="/register">Inscription</nuxt-link>
             <nuxt-link class="navbar-item ins-re" to="/login">Connexion</nuxt-link>
           </template>

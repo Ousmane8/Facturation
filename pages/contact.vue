@@ -9,7 +9,7 @@
 import Contact from "~/components/Billing/Contacts/Contact";
 export default {
   name: "Contacts",
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
     Contact,
   },

@@ -44,7 +44,7 @@
 
 export default {
   name: "Home",
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
   },
   data() {

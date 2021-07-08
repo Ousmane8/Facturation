@@ -15,7 +15,7 @@
 
 export default {
   name: "Carte",
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
   },
   data() {

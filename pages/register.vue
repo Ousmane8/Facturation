@@ -64,7 +64,7 @@ import Notification from '~/components/Notification'
 
 export default {
   name:"Inscription",
-  middleware: 'guest',
+  //middleware: 'guest',
   components: {
     Notification,
   },

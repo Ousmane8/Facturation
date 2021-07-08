@@ -27,7 +27,7 @@ import Chart3 from "@/components/Chart3/Chart3";
 
 export default {
   name: "Dashboard",
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
     Chart1, Chart2, Chart3
   },
